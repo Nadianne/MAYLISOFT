@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1652271649 source:c:\users\55799\documents\ed1\matlisoft\src\arvore.cpp
+	"Arvore.h"
+
+1652271649 c:\users\55799\documents\ed1\matlisoft\include\arvore.h
+
+1652274114 source:c:\users\55799\documents\ed1\matlisoft\main.cpp
+	<iostream>
+
