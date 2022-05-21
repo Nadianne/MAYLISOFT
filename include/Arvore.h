@@ -1,20 +1,25 @@
 #ifndef ARVORE_H
 #define ARVORE_H
+#include <string>
+#include "NoArvore.h"
+using namespace std;
 
+// Aqui são declarados os metodos da biblioteca arvore
+// o conteúdo dos metodos fica em arvore.cpp
 
-class Arvore
-{
+class Arvore{
+
+    private:
+        int length;
+        NoArvore *raiz;
+
     public:
         Arvore();
         virtual ~Arvore();
+        int getLength();
 
-        unsigned int GetCounter() { return m_Counter; }
-        void SetCounter(unsigned int val) { m_Counter = val; }
+        bool search(string chave, NoArvore& retorno);
 
-    protected:
-
-    private:
-        unsigned int m_Counter;
 };
 
 #endif // ARVORE_H

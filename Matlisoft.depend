@@ -7,3 +7,30 @@
 1652274114 source:c:\users\55799\documents\ed1\matlisoft\main.cpp
 	<iostream>
 
+1653111342 source:/home/eduardo/Documentos/UFS/ED1/MAYLISOFT/main.cpp
+	<iostream>
+	<string>
+	"Arvore.h"
+
+1653108155 source:/home/eduardo/Documentos/UFS/ED1/MAYLISOFT/arvore.cpp
+	"arvore.h"
+	<string.h>
+
+1653108131 /home/eduardo/Documentos/UFS/ED1/MAYLISOFT/arvore.h
+	<string>
+	<string>
+
+1653115448 source:/home/eduardo/Documentos/UFS/ED1/MAYLISOFT/src/NoArvore.cpp
+	"NoArvore.h"
+
+1653114330 /home/eduardo/Documentos/UFS/ED1/MAYLISOFT/include/NoArvore.h
+	<string>
+
+1653115728 /home/eduardo/Documentos/UFS/ED1/MAYLISOFT/include/Arvore.h
+	<string>
+	"NoArvore.h"
+
+1653111300 source:/home/eduardo/Documentos/UFS/ED1/MAYLISOFT/src/Arvore.cpp
+	"Arvore.h"
+	<string.h>
+

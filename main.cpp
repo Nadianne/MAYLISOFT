@@ -1,16 +1,8 @@
 #include <iostream>
+#include <string>
+#include "Arvore.h"
 
 using namespace std;
-
-typedef struct no
-{
-    int dado;
-    struct no *pai;
-    struct no *filhoEsq;
-    struct no *filhoDir;
-} tipoNo;
-
-
 
 void menu()
 {
@@ -19,45 +11,42 @@ void menu()
 
     do
     {
-        cout << "    __  ___    ___ __  __    __     ____   _____   ____     ______  ______" << endl;
-        cout << "   /  |/  /   /   |\ \/ /   / /    /  _/  / ___/  / __ \   / ____/ /_  __/" << endl;
-        cout << "  / /|_/ /   / /| | \  /   / /     / /    \__ \  / / / /  / /_      / / " << endl;
-        cout << " / /  / /   / ___ | / /   / /___ _/ /    ___/ / / /_/ /  / __/     / / " << endl;
-        cout << "/_/  /_/   /_/  |_|/_/   /_____//___/   /____/  \____/  /_/       /_/  " << endl;
 
-        cout << "-- Soluçoes empresariais --" << endl;
+        cout << "    __  ___    ___  __  __   __     ____   _____   ____     ______  ______" << endl;
+        cout << "   /  |/  /   /   | \\ \\/ /  / /    /  _/  / ___/  / __ \\   / ____/ /_  __/" << endl;
+        cout << "  / /|_/ /   / /| |  \\  /  / /     / /    \\__ \\  / / / /  / /_      / / " << endl;
+        cout << " / /  / /   / ___ |  / /  / /___ _/ /    ___/ / / /_/ /  / __/     / / " << endl;
+        cout << "/_/  /_/   /_/  |_| /_/  /_____//___/   /____/  \\____/  /_/       /_/  " << endl;
 
-        cout << " 1 - Insere um no na arvore" << endl;
-        cout << " 0 - Encerra o programa" << endl;
-        cout << " Digite sua opcao:"<< endl;
-        scanf("%d",&op);
+        cout << "-- Soluçoes empresariais --" << endl << endl;
+
+        cout << " 1 - Ver produtos" << endl;
+        cout << " 1 - Pesquisar Produto" << endl;
+        cout << " 1 - Cadastrar produto" << endl;
+        cout << " 0 - Encerra o programa" << endl << endl;
+        cout << " Digite sua opcao: ";
+        cin >> op;
         switch(op)
         {
 
         case 0:
-            printf("\nEncerrando programa...");
+            cout << "\nEncerrando programa..." << endl;
             //excluirArv(raiz);
             //raiz = NULL;
             //raiz = NULL;
             break;
         default:
-            printf("\nOpcao invalida! Escolha uma nova opcao: ");
+            cout << "\nOpcao invalida! Escolha uma nova opcao: " << endl;
         }
+        system("clear||cls");
     }
     while(op != 0);
 }
 
-
-
-
-
 int main()
 {
-
-    tipoNo *raiz = NULL, *resposta;
-    menu();
-
-    cout << "Hello world!" << endl;
+    Arvore arvore;
+    // menu();
     return 0;
 }
 
