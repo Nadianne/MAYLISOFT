@@ -7,8 +7,10 @@
 1652274114 source:c:\users\55799\documents\ed1\matlisoft\main.cpp
 	<iostream>
 
-1653111342 source:/home/eduardo/Documentos/UFS/ED1/MAYLISOFT/main.cpp
+1653165920 source:/home/eduardo/Documentos/UFS/ED1/MAYLISOFT/main.cpp
 	<iostream>
+	<stdio.h>
+	<stdlib.h>
 	<string>
 	"Arvore.h"
 
@@ -20,17 +22,18 @@
 	<string>
 	<string>
 
-1653115448 source:/home/eduardo/Documentos/UFS/ED1/MAYLISOFT/src/NoArvore.cpp
+1653161291 source:/home/eduardo/Documentos/UFS/ED1/MAYLISOFT/src/NoArvore.cpp
 	"NoArvore.h"
 
-1653114330 /home/eduardo/Documentos/UFS/ED1/MAYLISOFT/include/NoArvore.h
+1653161302 /home/eduardo/Documentos/UFS/ED1/MAYLISOFT/include/NoArvore.h
 	<string>
 
-1653115728 /home/eduardo/Documentos/UFS/ED1/MAYLISOFT/include/Arvore.h
+1653164659 /home/eduardo/Documentos/UFS/ED1/MAYLISOFT/include/Arvore.h
 	<string>
 	"NoArvore.h"
 
-1653111300 source:/home/eduardo/Documentos/UFS/ED1/MAYLISOFT/src/Arvore.cpp
+1653165936 source:/home/eduardo/Documentos/UFS/ED1/MAYLISOFT/src/Arvore.cpp
+	<iostream>
 	"Arvore.h"
 	<string.h>
 

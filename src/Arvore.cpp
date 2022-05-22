@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Arvore.h"
 #include <string.h>
 using namespace std;
@@ -22,7 +23,7 @@ int Arvore::getLength() {
 
 // Aqui ficam os metodos para manipular a árvore
 
-bool Arvore::search(string chave, NoArvore& retorno) {
+bool Arvore::search(string chave, NoArvore* retorno) {
 
     // Recebemos uma chave para pesquisar na árvore
     // e um ponteiro para armazenarmos o valor encontrado
@@ -39,7 +40,7 @@ bool Arvore::search(string chave, NoArvore& retorno) {
             noAtual = noAtual->getFilhoEsquerdo();
         }else {
             // O valor foi encontrado
-            retorno = *noAtual;
+            *retorno = *noAtual;
             return true;
         }
     }
@@ -47,13 +48,80 @@ bool Arvore::search(string chave, NoArvore& retorno) {
     return false;
 }
 
-void Arvore::rotacaoSimples(NoArvore no, int direcao) {
+bool Arvore::push(NoArvore* no) {
+
+    if(this->raiz == NULL)
+        this->raiz = no;
+    else {
+        this->adicionarFilho(this->raiz, no);
+    }
+}
+
+void Arvore::adicionarFilho(NoArvore* noArvore, NoArvore* novoNo) {
+    if(noArvore->getChave() > novoNo->getChave()) {
+        if(noArvore->getFilhoEsquerdo() != NULL)
+            this->adicionarFilho(noArvore->getFilhoEsquerdo(), novoNo);
+        else
+            noArvore->setFilhoEsquerdo(novoNo);
+    }else {
+        if(noArvore->getFilhoDireito() != NULL)
+            adicionarFilho(noArvore->getFilhoDireito(), novoNo);
+        else
+            noArvore->setFilhoDireito(novoNo);
+    }
 
 }
 
-void Arvore::rotacaoDipla(NoArvore no, int direcao) {
-
+void Arvore::mostrarArvore() {
+    this->exibeInOrdem(this->raiz);
 }
+
+void Arvore::exibeInOrdem(NoArvore *atual){
+    if(atual != NULL){
+        exibeInOrdem(atual->getFilhoEsquerdo());
+        cout << " " << atual->getChave() << "    " << atual->getNome() << endl;
+        exibeInOrdem(atual->getFilhoDireito());
+    }
+}
+
+
+/*
+void Arvore::rotacaoSimplesEsquerda(NoArvore*& no) {
+    NoArvore* filho = no->getFilhoEsquerdo();
+    no->setFilhoEsquerdo(filho->getFilhoDireito());
+    filho->setFilhoDireito(no);
+    no = filho;
+}
+
+void Arvore::rotacaoSimplesDireita(NoArvore*& no) {
+    NoArvore* filho = no->getFilhoDireito();
+    no->setFilhoDireito(filho->getFilhoEsquerdo());
+    filho->setFilhoEsquerdo(no);
+    no = filho;
+}
+
+void Arvore::rotacaoDuplaEsquerda(NoArvore*& no) {
+    NoArvore* filho = no->getFilhoEsquerdo()->getFilhoDireito();
+    no->getFilhoEsquerdo()->setFilhoDireito(filho->getFilhoEsquerdo());
+    filho->setFilhoEsquerdo(no->getFilhoEsquerdo());
+    no->setFilhoEsquerdo(filho);
+    filho = no->getFilhoEsquerdo();
+    no->setFilhoEsquerdo(filho->getFilhoDireito());
+    filho->setFilhoDireito(no);
+    no = filho;
+}
+
+void Arvore::rotacaoDuplaDireita(NoArvore*& no) {
+    NoArvore* filho = no->getFilhoDireito()->getFilhoEsquerdo();
+    no->getFilhoDireito()->setFilhoEsquerdo(filho->getFilhoDireito());
+    filho->setFilhoDireito(no->getFilhoDireito());
+    no->setFilhoDireito(filho);
+    filho = no->getFilhoDireito();
+    no->setFilhoDireito(filho->getFilhoEsquerdo());
+    filho->setFilhoEsquerdo(no);
+    no = filho;
+}
+*/
 
 // Destrutor - Esse metodo é executado quando a arvore é destruida
 

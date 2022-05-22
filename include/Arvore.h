@@ -18,7 +18,19 @@ class Arvore{
         virtual ~Arvore();
         int getLength();
 
-        bool search(string chave, NoArvore& retorno);
+        bool search(string chave, NoArvore* retorno);
+
+        bool push(NoArvore* no);
+        void adicionarFilho(NoArvore* noArvore, NoArvore* novoNo);
+
+        void mostrarArvore();
+        void exibeInOrdem(NoArvore *atual);
+        /*
+        void rotacaoSimplesEsquerda(NoArvore*& no);
+        void rotacaoSimplesDireita(NoArvore*& no);
+        void rotacaoDuplaEsquerda(NoArvore*& no);
+        void rotacaoDuplaDireita(NoArvore*& no);
+        */
 
 };
 
